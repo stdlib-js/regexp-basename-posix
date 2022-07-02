@@ -53,7 +53,9 @@ If no recognized module system is present, access bundle contents via the global
 ```html
 <script type="text/javascript">
 (function () {
+(function () {
     window.reBasenamePosix;
+})();
 })();
 </script>
 ```
@@ -94,6 +96,7 @@ var base = reBasenamePosix.REGEXP.exec( 'foo/bar/index.js' )[ 1 ];
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
+(function () {
 
 var RE_BASENAME_POSIX = reBasenamePosix();
 var base = RE_BASENAME_POSIX.exec( 'index.js' )[ 1 ];
@@ -117,6 +120,7 @@ base = RE_BASENAME_POSIX.exec( '/foo/bar/file' )[ 1 ];
 base = RE_BASENAME_POSIX.exec( '/foo/bar/.gitignore' )[ 1 ];
 // returns '.gitignore'
 
+})();
 })();
 </script>
 </body>
@@ -217,9 +221,9 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/regexp/basename]: https://github.com/stdlib-js/regexp-basename/tree/umd
+[@stdlib/regexp/basename]: https://github.com/stdlib-js/regexp-basename/tree/umd/tree/umd
 
-[@stdlib/regexp/basename-windows]: https://github.com/stdlib-js/regexp-basename-windows/tree/umd
+[@stdlib/regexp/basename-windows]: https://github.com/stdlib-js/regexp-basename-windows/tree/umd/tree/umd
 
 <!-- </related-links> -->
 
