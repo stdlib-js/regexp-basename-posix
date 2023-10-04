@@ -42,13 +42,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import reBasenamePosix from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/regexp-basename-posix/tags). For example,
+
+```javascript
 import reBasenamePosix from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@v0.1.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { REGEXP } from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@v0.1.1-esm/index.mjs';
+import { REGEXP } from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@esm/index.mjs';
 ```
 
 #### reBasenamePosix()
@@ -86,7 +91,7 @@ var base = reBasenamePosix.REGEXP.exec( 'foo/bar/index.js' )[ 1 ];
 <body>
 <script type="module">
 
-import reBasenamePosix from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@v0.1.1-esm/index.mjs';
+import reBasenamePosix from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@esm/index.mjs';
 
 var RE_BASENAME_POSIX = reBasenamePosix();
 var base = RE_BASENAME_POSIX.exec( 'index.js' )[ 1 ];
