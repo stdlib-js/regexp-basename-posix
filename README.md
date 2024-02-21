@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import reBasenamePosix from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@esm/index.mjs';
+import reBasenamePosix from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@v0.2.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { REGEXP } from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@esm/index.mjs';
+import { REGEXP } from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@v0.2.1-esm/index.mjs';
 ```
 
 #### reBasenamePosix()
@@ -86,7 +86,7 @@ var base = reBasenamePosix.REGEXP.exec( 'foo/bar/index.js' )[ 1 ];
 <body>
 <script type="module">
 
-import reBasenamePosix from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@esm/index.mjs';
+import reBasenamePosix from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@v0.2.1-esm/index.mjs';
 
 var RE_BASENAME_POSIX = reBasenamePosix();
 var base = RE_BASENAME_POSIX.exec( 'index.js' )[ 1 ];
