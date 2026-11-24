@@ -35,32 +35,38 @@ limitations under the License.
 
 > [Regular expression][regexp] to capture the last part of a [POSIX][posix] path.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/regexp-basename-posix
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var reBasenamePosix = require( '@stdlib/regexp-basename-posix' );
+reBasenamePosix = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var reBasenamePosix = require( 'path/to/vendor/umd/regexp-basename-posix/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.reBasenamePosix;
+})();
+</script>
 ```
 
 #### reBasenamePosix()
@@ -92,8 +98,13 @@ var base = reBasenamePosix.REGEXP.exec( 'foo/bar/index.js' )[ 1 ];
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var reBasenamePosix = require( '@stdlib/regexp-basename-posix' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/regexp-basename-posix@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var RE_BASENAME_POSIX = reBasenamePosix();
 var base = RE_BASENAME_POSIX.exec( 'index.js' )[ 1 ];
@@ -116,6 +127,11 @@ base = RE_BASENAME_POSIX.exec( '/foo/bar/file' )[ 1 ];
 
 base = RE_BASENAME_POSIX.exec( '/foo/bar/.gitignore' )[ 1 ];
 // returns '.gitignore'
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -215,9 +231,9 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/regexp/basename]: https://github.com/stdlib-js/regexp-basename
+[@stdlib/regexp/basename]: https://github.com/stdlib-js/regexp-basename/tree/umd
 
-[@stdlib/regexp/basename-windows]: https://github.com/stdlib-js/regexp-basename-windows
+[@stdlib/regexp/basename-windows]: https://github.com/stdlib-js/regexp-basename-windows/tree/umd
 
 <!-- </related-links> -->
 
